@@ -3,7 +3,7 @@
 use crate::ShapeArgument;
 use alloc::vec::Vec;
 use burn::prelude::{Backend, Shape, Tensor};
-use burn::tensor::BasicOps;
+use burn::tensor::{BasicOps, TensorKind};
 
 impl ShapeArgument for &Shape {
     fn get_shape_vec(self) -> Vec<usize> {
@@ -20,10 +20,10 @@ impl ShapeArgument for Shape {
 impl<B, const D: usize, K> ShapeArgument for &Tensor<B, D, K>
 where
     B: Backend,
-    K: BasicOps<B>,
+    K: TensorKind<B> + BasicOps<B>,
 {
     fn get_shape_vec(self) -> Vec<usize> {
-        self.shape().dims.clone()
+        self.dims().to_vec()
     }
 }
 
