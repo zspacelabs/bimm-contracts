@@ -18,6 +18,9 @@ The goal of this library is to make in-line geometry contracts:
 
 #### Recent Changes
 
+* **0.19.0**
+  * Switched to `burn` tracking versioning.
+  * Dropped explicit support for `tch`.
 * **0.4.2**
   * Add `#[track_caller]` support for better error messages.
 * **0.4.0**
