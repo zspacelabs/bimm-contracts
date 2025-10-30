@@ -541,8 +541,7 @@ impl<'a> ShapeContract<'a> {
         let num_slots = self.index.len();
         assert_eq!(env.len(), num_slots);
 
-        self.format_resolve(shape, env, loc)
-            .expect("Shape should match pattern");
+        self.format_resolve(shape, env, loc)?;
 
         let mut out = [0; K];
         for (i, &k) in selection.iter().enumerate() {
