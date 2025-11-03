@@ -1,16 +1,21 @@
-#![warn(missing_docs)]
 //! `proc_macro` support for BIMM Contracts.
+#![no_std]
+#![warn(missing_docs)]
+
+#[cfg(test)]
+#[macro_use]
+extern crate std;
 
 extern crate alloc;
 
 use alloc::boxed::Box;
+use alloc::collections::BTreeSet;
 use alloc::string::String;
 use alloc::vec;
 use alloc::vec::Vec;
 use proc_macro::TokenStream;
 use proc_macro2::TokenStream as TokenStream2;
 use quote::quote;
-use std::collections::BTreeSet;
 use syn::Result as SynResult;
 use syn::parse::{Parse, ParseStream};
 use syn::{LitStr, Token, parse_macro_input};

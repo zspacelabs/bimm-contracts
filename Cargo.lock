@@ -239,7 +239,7 @@ checksum = "55248b47b0caf0546f7988906588779981c43bb1bc9d0c44087278f80cdb44ba"
 
 [[package]]
 name = "bimm-contracts"
-version = "0.19.1"
+version = "0.19.2"
 dependencies = [
  "bimm-contracts-macros",
  "burn",
@@ -249,7 +249,7 @@ dependencies = [
 
 [[package]]
 name = "bimm-contracts-macros"
-version = "0.19.1"
+version = "0.19.2"
 dependencies = [
  "proc-macro2",
  "quote",
