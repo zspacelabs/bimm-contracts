@@ -9,8 +9,8 @@ members = [
 
 [workspace.package]
 edition = "2024"
-version = "0.19.2"
-repository = "https://github.com/crutcher/bimm-contracts"
+version = "0.20.1"
+repository = "https://github.com/zspacelabs/bimm-contracts"
 license = "MIT"
 rust-version = "1.88.0"
 
@@ -26,14 +26,14 @@ doc_markdown = "warn"
 rpath = true
 
 [workspace.dependencies]
-burn = { version = "^0.19.0" }
+burn = { version = "^0.20.1" }
 
 # macro dependencies
 proc-macro2 = { version = "^1.0.97" }
-syn = { version = "^2.0.104" }
-quote = { version = "^1.0.40" }
+syn = { version = "2.0.111" }
+quote = { version = "^1.0.45" }
 
 # Test and/or Examples dependencies
-criterion = { version = "^0.7.0" }
-indoc = { version = "^2.0.6" }
+criterion = { version = "0.8.2" }
+indoc = { version = "2.0.7" }
 
